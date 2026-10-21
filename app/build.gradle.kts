@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
@@ -33,6 +34,9 @@ android {
         compose = true
         viewBinding = true
     }
+    kotlinOptions {
+        jvmTarget = "11"
+    }
 }
 
 dependencies {
@@ -49,6 +53,7 @@ dependencies {
     // Room
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
+    implementation(libs.core.ktx)
     ksp(libs.androidx.room.compiler)
 
     // ML Kit & CameraX

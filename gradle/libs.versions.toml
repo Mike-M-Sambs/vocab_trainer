@@ -13,6 +13,7 @@ coroutines = "1.7.3"
 mlkit-textrecognition = "16.0.0"
 camerax = "1.3.0"
 ksp = "2.2.10-2.0.2"
+coreKtxVersion = "1.19.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -40,8 +41,10 @@ androidx-camera-lifecycle = { group = "androidx.camera", name = "camera-lifecycl
 androidx-camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "camerax" }
 # Coroutines
 kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtxVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
